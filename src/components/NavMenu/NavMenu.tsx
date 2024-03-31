@@ -1,18 +1,53 @@
 
 import { useState } from 'react';
+import Link from 'next/link';
+import { Products } from '../../../lib/data';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faBars as bars} from '@fortawesome/free-solid-svg-icons'
 
 function NavMenu() {
 
+    const getUniqueElements = (arr: string[]) => {
+        let uniqueArray = [];
+        
+        for (let i = 0; i < arr.length; i++) {
+          if (uniqueArray.indexOf(arr[i]) === -1) {
+            uniqueArray.push(arr[i]);
+          }
+        }
+         
+        return uniqueArray;
+    }
+      
+
+    const getProductTypes = () => {
+        const productTypes = Products.map(p => p.productType)
+        return getUniqueElements(productTypes)
+    }
+
+    const getProductType = (productType: string) => {
+        return Products.filter(p => productType === p.productType)
+    }
+
+    const drawSubcategories = (route: string, arr: string[]) => {
+        return arr.map((p, i) => <li key={i}><Link href={`${route}/${p}`}>{p}</Link></li>)
+    }
+
+
+    const productTypes = getProductTypes();
+    const pt = productTypes.filter(pt => pt !== 'Услуги')
+    const so = getProductType('Услуги')
+    const s = so.map(ss => ss.name)
    
    return (
     <nav>
     <menu>
         <li id="demo1">
-            <a id="drop"><span>Меню</span> <span className="white"><i className="fa-solid fa-bars"></i></span></a>
+            <a id="drop"><span>Меню</span> <span className="white"><FontAwesomeIcon className="fa-solid fa-bars" icon={bars} /></span></a>
             <menu>
             
                 <li>
-                   <a>О компании</a>
+                   <Link href='/'>О компании</Link>
                    <menu>
                       <li><a>Информация</a></li>
                       <li><a>Наш коллектив</a></li>
@@ -22,33 +57,23 @@ function NavMenu() {
                 </li>
 
                 <li id="demo2">
-                    <a>Продукты</a>
+                    <Link href='/products'>Продукты</Link>
                     <menu>
-                        <li><a>1С BAIM: Бухгалтерия для Азербайджана</a></li>
-                        <li><a>1С BAIM: Комплексная Автоматизация для Азербайджана</a></li>
-                        <li><a>1С BAIM: ERP для Азербайджана</a></li>
-                        <li><a>Все продукты 1С</a></li>
-                        <li><a>Какой продукт выбрать</a></li>
+                        {drawSubcategories('/products',pt)}
                     </menu>
                 </li>
 
                 <li id="demo2">
-                    <a>Услуги</a>
+                    <Link href='/services'>Услуги</Link>
                     <menu>
-                        <li><a>Сопровождение 1С: ИТС</a></li>
-                        <li><a>Абонентское обслуживание 1С</a></li>
-                        <li><a>Предпроектное обследование</a></li>
-                        <li><a>Установка серверного ПО</a></li>
-                        <li><a>Разработка сайтов</a></li>
-                        <li><a>Разработка мобильного приложения</a></li>
-                        <li><a>Внедрение программного обеспечения 1С</a></li>
+                        {drawSubcategories('/service',s)}
                     </menu>
                 </li>
 
-                <li><a>Наши клиенты</a></li>
+                <li><Link href='/clients'>Наши клиенты</Link></li>
 
                 <li id="demo2">
-                    <a>Полезные материалы</a>
+                    <Link href='/materials'>Полезные материалыы</Link>
                     <menu>
                         <li><a>Новости</a></li>
                         <li><a>Инструкции</a></li>
@@ -64,3 +89,4 @@ function NavMenu() {
 }
 
 export default NavMenu;
+
