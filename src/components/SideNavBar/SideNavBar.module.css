@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* :global {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+} */
+
+/* body {
+  min-height: 100vh;
+  background: #eef5fe;
+} */
+
+.bx {
+  padding-right: 10px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  
+}
+
+/* .nav_image {
+  display: flex;
+  min-width: 55px;
+  justify-content: center;
+}
+
+.nav_image img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+} */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 270px;
+  background: #fff;
+  padding: 15px 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.sidebar.close {
+  width: calc(55px + 20px);
+}
+
+.logo_items {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.logo_name {
+  font-size: 1.5rem;
+  font-weight: 500px;
+  transition: all 0.3s ease;
+  color: #4070f4;
+  margin-right: 102px;
+  padding-left: 10px;
+}
+
+.sidebar.close .logo_name,
+.sidebar.close #lock-icon,
+.sidebar.close #sidebar-close {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#lock-icon,
+.lock_icon,
+#sidebar-close {
+  color: #4070f4;
+  font-size: 1.5rem;
+  padding: 20px;
+  cursor: pointer;
+  /* margin-right: 65px; */
+  border: 1px solid transparent;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+#sidebar-close {
+  display: none;
+  color: #333;
+}
+
+.menu_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  height: calc(100% - 82px);
+}
+
+.menu_container::-webkit-scrollbar {
+  display: none;
+}
+
+.menu_title {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.menu_title .title {
+  margin-left: 15px;
+  transition: all 0.3s ease;
+  width: 260px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.sidebar.close .title {
+  opacity: 0;
+}
+
+.menu_title .ico {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+  color: #585858;
+  font-size: 1.5rem;
+}
+
+.menu_title .ico {
+  opacity: 0;
+}
+
+.sidebar.close .ico {
+  opacity: 1;
+}
+
+.item {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  background-color: transparent;
+  color: #707070;
+}
+
+.link:hover {
+  color: #4070f4;
+  background-color: transparent;
+}
+
+.link span {
+  white-space: nowrap;
+}
+
+.link i {
+  height: 50px;
+  min-width: 55px;
+  display: flex;
+  font-size: 22px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.sidebar_profile {
+  padding-top: 15px;
+  margin-top: 15px;
+  gap: 15px;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.sidebar_profile .name {
+  font-size: 18px;
+  color: #333;
+}
+
+.sidebar_profile .email {
+  font-size: 15px;
+  color: #333;
+}
+
+.navbar {
+  max-width: 500px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 60%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 0 0 8px 8px;
+  justify-content: space-between;
+}
+
+#sidebar-open {
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+  margin-right: 20px;
+  display: none;
+}
+
+.search_box {
+  height: 46px;
+  max-width: 500px;
+  width: 100%;
+  border: 1px solid #aaa;
+  outline: none;
+}

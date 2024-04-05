@@ -40,7 +40,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context: any) {
     const {params} = context;
-
+ 
     const productsData = Products.filter(p => p.productType === params.menuSubcategoryId)
     console.log(productsData)
 

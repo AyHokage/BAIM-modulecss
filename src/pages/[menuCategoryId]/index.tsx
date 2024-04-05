@@ -19,7 +19,7 @@ export default menuCategoryDetails
 export async function getStaticPaths() {
   return {
       paths: [
-          {
+          { 
               params: {
                 menuCategoryId: 'products'
               }
@@ -31,7 +31,7 @@ export async function getStaticPaths() {
           }
       ],
       fallback: 'blocking',
-  }
+  } 
 }
 
 export async function getStaticProps(context: any) {

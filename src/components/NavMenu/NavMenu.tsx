@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faBars as bars} from '@fortawesome/free-solid-svg-icons'
 
 function NavMenu() {
-
+ 
     const getUniqueElements = (arr: string[]) => {
         let uniqueArray = [];
         
@@ -30,7 +30,7 @@ function NavMenu() {
     }
 
     const drawSubcategories = (route: string, arr: string[]) => {
-        return arr.map((p, i) => <li key={i}><Link href={`${route}/${p}`}>{p}</Link></li>)
+        return arr.map((p, i) => <li key={i}><Link className='navLink' href={`${route}/${p}`}>{p}</Link></li>)
     }
 
 
@@ -47,37 +47,37 @@ function NavMenu() {
             <menu>
             
                 <li>
-                   <Link href='/'>О компании</Link>
+                   <Link className='navLink' href='/'>О компании</Link>
                    <menu>
-                      <li><a>Информация</a></li>
-                      <li><a>Наш коллектив</a></li>
-                      <li><a>Карьера</a></li>
-                      <li><a>Обратная связь</a></li>
+                      <li><a className='navLink'>Информация</a></li>
+                      <li><a className='navLink'>Наш коллектив</a></li>
+                      <li><a className='navLink'>Карьера</a></li> 
+                      <li><a className='navLink'>Обратная связь</a></li>
                    </menu>  
                 </li>
 
                 <li id="demo2">
-                    <Link href='/products'>Продукты</Link>
+                    <Link className='navLink' href='/products'>Продукты</Link>
                     <menu>
                         {drawSubcategories('/products',pt)}
                     </menu>
                 </li>
 
                 <li id="demo2">
-                    <Link href='/services'>Услуги</Link>
+                    <Link className='navLink' href='/services'>Услуги</Link>
                     <menu>
                         {drawSubcategories('/service',s)}
                     </menu>
                 </li>
 
-                <li><Link href='/clients'>Наши клиенты</Link></li>
+                <li><Link className='navLink' href='/clients'>Наши клиенты</Link></li>
 
                 <li id="demo2">
-                    <Link href='/materials'>Полезные материалыы</Link>
+                    <Link className='navLink' href='/materials'>Полезные материалыы</Link>
                     <menu>
-                        <li><a>Новости</a></li>
-                        <li><a>Инструкции</a></li>
-                        <li><a>Видеоматериалы</a></li>
+                        <li><a className='navLink'>Новости</a></li>
+                        <li><a className='navLink'>Инструкции</a></li>
+                        <li><a className='navLink'>Видеоматериалы</a></li>
                     </menu>
                 </li>
 

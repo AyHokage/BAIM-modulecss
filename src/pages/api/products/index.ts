@@ -6,7 +6,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(200).json(Products)
     } if (req.method == 'POST'){
         const productData = {
-            id: Products.length+1, 
+            id: Products.length+1,  
             name: req.body.productName,
             desc: req.body.productDesc,
             img: req.body.productImg,
