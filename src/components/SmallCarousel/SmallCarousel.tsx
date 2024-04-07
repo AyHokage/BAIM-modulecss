@@ -9,35 +9,35 @@ const SmallCarousel = () => {
                 <div className={styles.slider}>
                     <div className={styles.slideTrack}>
                         <div className={styles.slide}>
-                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/1c.png' />
+                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/ads/189.png' />
                         </div>
                     
                         <div className={styles.slide}>
-                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/1c.png' />
+                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/ads/aqrar.png' />
                         </div>
                         <div className={styles.slide}>
-                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/1c.png' />
+                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/ads/aqualife.png' />
                         </div>
                         <div className={styles.slide}>
-                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/1c.png' />
+                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/ads/caspian service.png' />
                         </div>
                         <div className={styles.slide}>
-                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/1c.png' />
+                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/ads/ceo.png' />
                         </div>
                         <div className={styles.slide}>
-                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/1c.png' />
+                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/ads/chint.png' />
                         </div>
                         <div className={styles.slide}>
-                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/1c.png' />
+                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/ads/cpm.png' />
                         </div>
                         <div className={styles.slide}>
-                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/1c.png' />
+                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/ads/elmando.png' />
                         </div>
                         <div className={styles.slide}>
-                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/1c.png' />
+                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/ads/pn.png' />
                         </div>
                         <div className={styles.slide}>
-                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/1c.png' />
+                            <Image className={styles.sliderImg} width={500} height={300} alt='1c' src='/ads/qdf.png' />
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 /* :global {
   * {
@@ -21,7 +21,6 @@
 .flex {
   display: flex;
   align-items: center;
-  
 }
 
 /* .nav_image {
@@ -61,25 +60,52 @@
   width: 100%;
   padding-top: 20px;
 }
-
-.logo_name {
+.lock_icon:hover {
+  color: #4070f4;
+}
+/* .logo_name {
   font-size: 1.5rem;
   font-weight: 500px;
-  transition: all 0.3s ease;
-  color: #4070f4;
+  color: #585858;
+  margin-right: 102px;
+  padding-left: 10px;
+} */
+
+.logo_title {
+  font-size: 1.5rem;
+  font-weight: 500px;
   margin-right: 102px;
   padding-left: 10px;
 }
 
 .sidebar.close .logo_name,
+.sidebar.close .logo_title,
 .sidebar.close #lock-icon,
 .sidebar.close #sidebar-close {
   opacity: 0;
   pointer-events: none;
 }
 
+.gray {
+  color: #333;
+}
+
 #lock-icon,
-.lock_icon,
+.lock_icon {
+  color: #4070f4;
+  font-size: 1.5rem;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  border: 1px solid transparent;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.close .lock_icon {
+  color: #333;
+}
+
 #sidebar-close {
   color: #4070f4;
   font-size: 1.5rem;
@@ -116,11 +142,12 @@
 }
 
 .menu_title .title {
-  margin-left: 15px;
+  margin-left: 5px;
   transition: all 0.3s ease;
   width: 260px;
   color: #333;
   font-size: 1.5rem;
+  display: flex; 
 }
 
 .sidebar.close .title {
