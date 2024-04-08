@@ -1,0 +1,15 @@
+.show {
+    display: block;
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+
+.hide {
+    display: none;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
